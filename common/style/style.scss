@@ -1,0 +1,83 @@
+view,
+scroll-view,
+swiper,
+button,
+input,
+textarea,
+label,
+navigator,
+image {
+	box-sizing: border-box;
+}
+
+image {
+	display: block;
+	height: auto;
+}
+
+button {
+	padding: 0;
+	margin: 0;
+	
+	&::after {
+		border: none;
+	}
+}
+
+
+.placeholder {
+	color: #999;
+	font-weight: normal;
+}
+
+.uicon-arrow-left {
+	font-weight: bold !important;
+}
+
+.page_container {
+	min-height: 100vh;
+	position: relative;
+	
+	&::before {
+		content: "";
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 0;
+		background: url('https://mettgpt.nymaite.cn/uploads/20230511/c4682aff5cd1df03660aee423c454bfb.png');
+		background-size: 200% auto;
+		background-position: 0 0;
+		pointer-events: none;
+		filter: blur(50rpx)
+	}
+	
+	&.home {
+		&::before {
+			background-size: 200% auto;
+		}
+	}
+	
+	&.tool {
+		&::before {
+			background-size: 150% auto;
+		}
+	}
+	
+	&.helper {
+		&::before {
+			background-size: 250% auto;
+		}
+	}
+	
+	&.user {
+		&::before {
+			background-size: 100% auto;
+		}
+	}
+	
+	.page_content {
+		position: relative;
+	}
+}
